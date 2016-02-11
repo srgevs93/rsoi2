@@ -1,0 +1,18 @@
+{% extends "generic_page.html" %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+  <h1>Register</h1>
+  <form method="POST" action="{{ url_for('user_api.post_user') }}">
+    login: <input name="login" value="" required="true"><br>
+    password: <input name="password" type="password" value="" required="true"><br>
+    name: <input name="name" value=""><br>
+    email: <input name="email" type="email" value=""><br>
+    phone: <input name="phone" type="tel" value=""><br>
+    department: <input name="department" value=""><br>
+    position: <input name="position" value=""><br>
+    <input type="reset" value="reset"><br>
+    <input type="submit" value="register"><br>
+  </form>
+{% endblock  %}

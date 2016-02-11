@@ -1,0 +1,16 @@
+{% extends "generic_page.html" %}
+
+{% block title %}Client:{% endblock %}
+
+{% block body %}
+  <h1>Register</h1>
+  <form method="POST" action="{{ url_for('client_api.post_client') }}">
+
+        secret: <input name="secret" value=""><br>
+        redirect_uri: <input name="redirect_uri" value=""><br>
+        name: <input name="name" value=""><br>
+
+        <input type="reset" value="reset"><br>
+        <input type="submit" value="create"><br>
+  </form>
+{% endblock  %}

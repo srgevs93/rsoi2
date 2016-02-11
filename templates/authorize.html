@@ -1,0 +1,18 @@
+{% extends "generic_page.html" %}
+
+{% block title %}Authorize{% endblock %}
+
+{% block body %}
+  <h1>Authorize</h1>
+  <p>For application <b>{{client_name}}</b></p>
+  <form method="POST">
+    {% if state is not none %}
+        <input name="state" type="hidden" value="{{state}}"><br>
+    {% endif %}
+        <input name="client_id" type="hidden" value="{{client_id}}"><br>
+        <input name="login"><br>
+        <input name="password" type="password"><br>
+        <input type="reset" value="reset"><br>
+        <input type="submit" value="sign in"><br>
+  </form>
+{% endblock  %}
